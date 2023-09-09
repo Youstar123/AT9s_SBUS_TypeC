@@ -1,0 +1,9 @@
+			RC_Ctl.rc.ch0 = (((sbus_rx_buffer[2] << 8) | sbus_rx_buffer[1]) & 0x07FF);
+			RC_Ctl.rc.ch1 = (((sbus_rx_buffer[2] >> 5) | sbus_rx_buffer[3] << 6) & 0x07FF);
+			RC_Ctl.rc.ch2 = ((((sbus_rx_buffer[5] << 10) | sbus_rx_buffer[4] << 2) | sbus_rx_buffer[3] >> 6) & 0x07FF);
+			RC_Ctl.rc.ch3 = (((sbus_rx_buffer[6]<< 7) | sbus_rx_buffer[5] >> 1) & 0x07FF);
+			RC_Ctl.rc.ch4 = (((sbus_rx_buffer[7] << 4) | sbus_rx_buffer[6] >> 4) & 0x07FF);
+			RC_Ctl.rc.ch5 = (((sbus_rx_buffer[9] << 9) | sbus_rx_buffer[8]<< 1 | sbus_rx_buffer[7] >> 7) & 0x07FF);
+			RC_Ctl.rc.ch6 = (((sbus_rx_buffer[10] << 6) | sbus_rx_buffer[9] >> 2) & 0x07FF);
+			RC_Ctl.rc.ch7 = (((sbus_rx_buffer[12] << 3) | sbus_rx_buffer[11] >> 5) & 0x07FF);
+			RC_Ctl.rc.ch8 = (((sbus_rx_buffer[13] << 8) | sbus_rx_buffer[12]) & 0x07FF);
